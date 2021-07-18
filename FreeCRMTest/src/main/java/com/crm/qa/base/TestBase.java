@@ -44,11 +44,11 @@ public class TestBase {
 		if(driver == null) {
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/Selenium_browser_driver/chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", "D:/Selenium_browser_driver/chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") +"/Selenium_browser_driver/geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver", "D:/Selenium_browser_driver/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 	}
 		e_driver = new EventFiringWebDriver(driver);

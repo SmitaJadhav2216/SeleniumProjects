@@ -29,7 +29,7 @@ public class TestBase {
 	public TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\EclipseWorkspace\\Page-Object-Model-POM-Design-With-Selenium-master\\Page-Object-Model-POM-Design-With-Selenium-master\\src\\main\\java\\com\\crm"
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm"
 					+ "\\qa\\config\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
@@ -44,11 +44,11 @@ public class TestBase {
 		if(driver == null) {
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:/Selenium_browser_driver/chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/Selenium_browser_driver/chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "D:/Selenium_browser_driver/geckodriver.exe");	
+			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") +"/Selenium_browser_driver/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 	}
 		e_driver = new EventFiringWebDriver(driver);

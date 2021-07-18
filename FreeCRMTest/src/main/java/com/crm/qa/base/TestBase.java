@@ -29,8 +29,8 @@ public class TestBase {
 	public TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("D:\\EclipseWorkspace\\Page-Object-Model-POM-Design-With-Selenium-master\\Page-Object-Model-POM-Design-With-Selenium-master\\src\\main\\java\\com\\crm"
-					+ "\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm"
+					+ "\\qa\\config\\config.properties"");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
